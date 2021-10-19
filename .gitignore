@@ -1,0 +1,4 @@
+./svn_repos/*
+./to_git/*
+./svn_beforegit/*
+
