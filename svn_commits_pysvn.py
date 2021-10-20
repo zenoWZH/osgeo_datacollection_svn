@@ -158,7 +158,7 @@ def save_one_svncommit(entry, proj):
             #print("Exception: %s" % e)
             sql_update = """UPDATE commit SET
              proj_id='%s', commiter_aliase_id='%s', commit_message='%s', commit_timestamp='%s', commit_sha='%s', commit_parents='%s', commit_refs='%s'
-             WHERE commit_id='%s'""" % (proj, entry.author, escape(entry.message), t_commit, rev_number, entry.revision.kind, source, id_commit)
+             WHERE commit_id='%s'""" % (proj, svn_commiter_id, escape(entry.message), t_commit, rev_number, entry.revision.kind, source, id_commit)
             cursor.execute(sql_update)
             db.commit()
             #print("%s : Update successfully" % entry['id'])
