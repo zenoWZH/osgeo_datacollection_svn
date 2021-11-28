@@ -175,7 +175,7 @@ svn_source_url = df["Repos"].values
 
 #coding=utf-8
 
-for work_dir in svn_source_url:
+for work_dir in svn_source_url[22:23]:
     #work_dir = '/mnt/data0/proj_osgeo/data_svn/svn_repos/gvsig-desktop/gvsig-desktop'
     #proj = gvsig-desktop
     proj = str(df.loc[df["Repos"] == work_dir]["Projects"].values[0]).lower()
